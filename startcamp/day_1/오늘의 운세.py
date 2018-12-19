@@ -18,8 +18,9 @@ import random
 a=(range(1,46))
 b=random.sample(a,6)
 
-if real_numbers == b:
-    print ('우승!!!!'
-    )
-else
-print ('실패하셨습니다.')
+n=0
+for (i) in real_numbers:  
+    if set (i) < set (b)
+n+1
+
+print (n)
