@@ -25,63 +25,44 @@ print (numbers["number"])
 # #
 # # 
 
-my_numbers = pick_lotto()
-numbers=get_lotto(837)
-def am_i_lucky(my_numbers,numbers):
-    n=0
-    for value in my_numbers:
-        if value in numbers["number"]:
-            n=n+1
-    if n==6:
-        return 'ranking=1'
-    # elif n==5 and bonus_number in my_numbers
-    #     ranking=2
-    elif n==5:
-        return 'ranking=3'
-    elif n==4:
-        return 'ranking=4'
-    elif n==3:
-        return 'ranking=5'
-    elif n==2:
-        return 'ranking=6'
-    else:
-        return 'ranking=7'
-
-rank= am_i_lucky(my_numbers,numbers)
-print(rank)
-
-
-# def am_i_lucky(pick, draw):
+# my_numbers = pick_lotto()
+# numbers=get_lotto(837)
+# def am_i_lucky(my_numbers,numbers):
 #     n=0
 #     for value in my_numbers:
-#         if value in real_numbers:
+#         if value in numbers["number"]:
 #             n=n+1
 #     if n==6:
-#         ranking=1
-#     elif n==5 and bonus_number in my_numbers
-#         ranking=2
+#         return 'ranking=1'
+#     # elif n==5 and bonus_number in my_numbers
+#     #     ranking=2
 #     elif n==5:
-#         ranking=3
+#         return 'ranking=3'
 #     elif n==4:
-#         ranking=4
+#         return 'ranking=4'
 #     elif n==3:
-#         ranking=5
+#         return 'ranking=5'
 #     elif n==2:
-#         ranking=6
+#         return 'ranking=6'
 #     else:
-#         ranking=7
-#     return ranking
-# result = am_i_lucky()
-# print(result)
+#         return 'ranking=7'
 
-# # my_numbers=set([1,2,3,4,5,8])
-# # real_numbers=set([1,2,3,4,5,6])
-# # bonus=7
+# rank= am_i_lucky(my_numbers,numbers)
+# print(rank)
 
-# # match_count=len(my_numbers & real_numbers)
-# # print (match_count)
+#정답
 
-# # if match_count ==6:
-# #     print('1등')
-# # elif match_count ==5 and bonus in my_numbers:
-# #     print('2등')
+def am_i_lucky(pick,draw):
+    match =set(pick) & set(draw["number"])
+    if len(match)== 6:
+        return('1등')
+    elif len(match)==5 and draw['bonus_number'] in pick:
+        return('3등')
+    elif len(match)==4:
+        return('4등')
+    elif len(match)==3:
+        return('5등')
+    else:
+        return('꽝')
+result=am_i_lucky(pick_lotto(),get_lotto(837))
+print (result)
