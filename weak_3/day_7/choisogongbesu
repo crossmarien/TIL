@@ -1,0 +1,47 @@
+#최소 공배수
+
+num1 = 20
+tem=num1
+num2 = 28
+
+n1=2
+n2=2
+number1=[]
+number2=[]
+# while  n1 <= min(num1,num2): 
+#num1이 작아져서 나중에 에러가남
+while n1<= min (tem, num2):
+    if tem % n1 ==0:
+        tem=tem/n1
+        number1.append(n1)
+    else : 
+        n1 += 1
+
+while  n2 <= min(num1,num2):
+    if num2 % n2 ==0:
+        num2=num2/n2
+        number2.append(n2)
+    else : 
+        n2 += 1
+  
+print (number1, number2)
+numbers= number1 + number2
+print (numbers)
+
+# lcm=1
+# for i in work2:
+#     lcm=i*lcm
+# print (lcm)    
+
+# for i in number:
+#     if num1 % i ==0:
+#         cd1.append(i)
+# for i in number:
+#     if num2 % i == 0:
+#         cd2.append(i)
+        
+# for i in cd1:
+#     if i in cd2 :
+#         assemblecd.append(i)
+# gcd= max (assemblecd)
+# print (gcd)    
