@@ -18,3 +18,24 @@ kill -9 11916
 
 
 
+pwd : 내 위치 확인
+
+
+
+cd .git
+
+
+
+git remote -v
+
+fetch 내가 가져올곳
+
+push 내가 보낼 곳
+
+
+
+cd ~ cat .gitconfig
+
+
+
+shift insert = ctrl v
