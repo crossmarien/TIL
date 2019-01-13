@@ -82,6 +82,7 @@ class Squirtle(Pokemon):
 a = Pikachu(10)
 b = Squirtle(10)
 
+
 def battle(p1, p2):
     import random
     # 선공 후공 결정
@@ -107,12 +108,14 @@ def battle(p1, p2):
     
 # battle(Pikachu(20), Squirtle(21))
 
-
-your_pokemon={Pikachu:20}
+your_pokemon=['Pikachu(20)']
+wild_pokemon=[]
 
 
 def go_pikachu():
     mypokemon=input('Pikachu or Squirtle')
     if mypokemon == 'Pikachu':
-        return battle(Pikachu(your_pokemon['Pikachu']), Squirtle(21)
+        return battle(Pikachu(20), Squirtle(21))
+    
+
 go_pikachu()
