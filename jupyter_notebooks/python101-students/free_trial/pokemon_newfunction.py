@@ -117,8 +117,7 @@ while n<5:
   a = Pikachu(20)
   b = Squirtle(21)
   wild_pokemons=[a,b]
-  z= input('출전할 포켓몬 abc순으로')
-  battle(z,wild_pokemons[1])
+  battle(a,wild_pokemons[1])
   random.shuffle(wild_pokemons)
   n += 1
 
