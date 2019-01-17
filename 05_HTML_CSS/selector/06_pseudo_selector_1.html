@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <style>
+         /*예시  */
+    /* a에 마우스를 올리면 */
+    a:hover {
+        font-weight: bold;
+        }
+    /* input에 포커스가 가면,  */
+    input:focus {background-color:yellow;}
+    
+    
+/* link pseudo selector, user action pseudo selector */
+    /* link를 방문하지 않았을때 */
+    a:link {color: green;}
+    /* 방문했을때 */
+    a:visited{color:seashell;}
+    /* clicking a */
+    a:active{color:blue;}
+    /* focused input type text and password */
+    input[type="text"]:focus,
+    input[type="password"]:focus{color:red;}
+    
+
+/* ui element state pseudo selector */
+    /* when input enabled, following span tag */
+    input:enabled + span{color:thistle;}
+    /* when input disabled, following span tag */
+    input:disabled+span{color:teal; text-decoration:line-through}
+    /* when input is checked, following span tag  */
+    input:checked + span{color:tomato;}
+/* structural pseudo selector */
+        /* p 요소 중에서 첫번째 자식을 선택 */
+    p:first-child {color:blue;}
+    /* last p child */
+    p:last-child {color:peru;}
+    
+    /* only pairs are aqua */
+    ol>li:nth-child(2n){color:aqua; }
+    /* impair */
+    ol>li:nth-child(2n+1) {color:blue;}
+    ol>li:first-child{color:blueviolet;}
+    ol>li:last-child{color:coral;}
+
+    /* 4번째가 li라면 */
+    ol>li:nth-child(4) {background: brown;}
+
+    /* ul의 모든 자식들중에 뒤에서부터 홀수요소를 선택 */
+    ul>:nth-last-child(2n+1) {color:crimson;}
+    /* 뒤에서부터 짝수를 선택.(위에껀 왜배운거냐) */
+    ul > :nth-last-child(2n) {color:mediumvioletred;}
+    /* ?요소의 부모 요소의 자식 요소중 첫번쨰 등장하는 ? */
+    p:first-of-type{color:blue;}
+    p:last-of-type{color:red;}
+    p:nth-of-type(2){color: green;}
+    p:nth-last-of-type(2){color: yellow;}
+    P:first-child {background: brown;}
+    
+
+    /* negation pseudo selector okay body? */
+    input:not([type="password"]){background:black;}
+
+
+    </style>
+</head>
+<body>
+
+    <p>이 p태근는 body's first child</p>
+    <h1>welcome to my home page</h1>
+    <p>this p tag is not body's first child nor the last child</p>
+    <div>
+        <p>ptag is div's first child</p>
+        <p>ptag is not div's first child but is the last child</p>
+    </div>
+
+    <div>
+        <h2>this is heading</h2>
+        <p>1문단</p>
+        <p>2문단</p>
+        <p>3문단</p>
+        <p>4문단</p>
+    </div>
+    
+    
+    <div>
+        <h2>this is heading</h2>
+        <p>1문단</p>
+        <p>2문단</p>
+        <p>3문단</p>
+        <p>4문단</p>
+    </div>
+
+    <div>
+        <h3>thisis heading 3</h3>
+
+    </div>
+                
+    
+    
+    
+    <div>
+        <ol>
+            <li>Espresso</li>
+            <li>Americano</li>
+            <li>Caffe latte</li>
+            <li>Caffe mocha</li>
+            <li>caramel latte</li>
+            <li>capuccino</li>
+        </ol>
+        <ul>
+                <li>Espresso</li>
+                <li>Americano</li>
+                <li>Caffe latte</li>
+                <li>Caffe mocha</li>
+                <li>caramel latte</li>
+                <li>capuccino</li>
+        </ul>
+    </div>
+
+    
+    <a href="#">Hover me</a>
+    <br><br>
+    <input type="text" placeholder = "Focus me">
+    <div>
+        <input type="text" value="I'll be red when focused">
+        <input type="password" value="I'll be red when focused">
+    </div>
+    <hr>
+    <form action="">
+        <input type="radio" value="메뉴a" checked="checked"> <span>순두부</span> <br>
+        <input type="radio" value="메뉴b"> <span>barbecue porkchop</span><br>
+        <input type="radio"value= "굶기" disabled> <span>굶기</span><br>
+
+        <input type="checkbox" value="taxi" checked="checked"> <span>택시타고가기</span> <br>
+        <input type="checkbox" value="public transports"><span>대중교통</span><br>
+        <input type="checkbox" value="walk" disabled> <span>걷기</span><br>
+    </form>
+    
+</body>
+</html>
