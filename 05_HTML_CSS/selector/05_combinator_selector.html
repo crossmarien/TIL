@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <style>
+    /* div 요소의 후손(n level) 요소중 ptag 전체 */
+    div p {color:red;}
+    /* div 요소의 자식 (1 level) 요소중 p 전체 */
+    div > p{color: blue;}
+    /* p의 sibling 요소중 바로뒤에있는 ul 요소 */
+    p+ul {color:lightsalmon;}
+    /* p in sibling of div  */
+    div ~ p{color: green;}
+    
+    
+    
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <h1> Heading</h1>
+    <div>
+        <p>문단1</p>
+        <p>문단2</p>
+        <span>
+            <p>문단 3</p>
+        </span>
+    </div>
+    <p>문단4</p>
+    <div> A div element</div>
+        <ul>
+            <li>coffee</li>
+            <li>tea</li>
+            <li>milk</li>
+        </ul>
+    
+    <p>first paragraph</p>
+        <ul>
+            <li>latte</li>
+            <li>choco</li>
+            <li>water</li>
+        </ul>
+    <h2>another list</h2>
+        <ul>
+            <li>apple</li>
+            <li>clementine</li>
+            <li>pastèque</li>
+        </ul>
+
+
+</body>
+</html>

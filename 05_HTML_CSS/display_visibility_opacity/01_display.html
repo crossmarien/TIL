@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* block */
+        /* body {
+            padding: 0px;   
+        }
+        div:nth-of-type(1){
+            background-color: orange;
+            padding: 20px;
+            margin: 30px;
+
+        }
+        div:nth-of-type(2){
+            background-color: aqua;
+            padding: 20px;
+            width: 300px;   
+            margin:30px;
+        } */
+        /* inline */
+        span{
+            background-color: brown;
+            color: white;
+            padding:10px;
+            width: 2000PX;
+            margin: 10px;
+            line-height: 50px;
+        }
+
+        /* inline block */
+        .wrapper{font-size:4;}
+        .inline-block{
+            display: inline-block;
+            /* inline block 요소들을 수직정렬 */
+            vertical-align: middle;
+            border: 5px solid navy;
+            font-size: 16px;
+        }
+
+        .box1{
+            width:300px;
+            height: 70px;
+            border: 5px saddlebrown
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 2px aliceblue
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="inline-block"> inline-block height 70px</div>
+    <div class="inline-block">inlineblock height 150px</div>
+    <div class="wrapper">
+        <div class="inline-block box1"> inline-block height 70px</div>
+        <div class="inline-block box2">inlineblock height 150px</div>
+    </div>
+    
+    <!-- block level element
+    Block's character
+    -always start in a new line.
+    -that's why it takes the whole place horizontally.(default width100%)
+    -width, height, margin, padding setting available.
+    -can include "inline level elemant".
+    ex: div(header,footer), h1~h6, p, ol, ul, hr, table, form
+    
+    
+    -->
+    <div>
+        <h2>block element</h2>
+        <p> width height unselected, by default width=100% height=auto(위에서부터 촘촘히 내려옴.)</p>
+
+    </div>
+
+
+    <div>
+        <h2>block level</h2>
+        <p>width: 300px > width: 300px, height: auto</p>
+    </div>
+<!-- inline level element
+1.새로운 라인에서 시작하지않으며, 문장의 중간에 줄바꿈 없이 들어갈수있다.
+2.content의 너비만큼 가로폭을 찾이한다.
+3.width, height, margin-top/bottom 속성을 지정할 수 없다. 상/하 여백은 line-height로 지정한다.
+4.inline 요소뒤에 공백, (\n, space)이 있으면, 자동으로 4xp이 띄어짐. 
+5.inline 레벨 요소안에 블록레벨 요소를 포함불가. 보통은 무조건 block>inline형식이다.
+ex: span, a, strong, img, br, input, select, textarea, button tag.
+
+
+
+-->
+
+    <h1>my <span>important</span> Heading </h1>
+    <span>Inline</span>
+    <span>Inline</span><span>Inline</span> 
+
+    <!-- Inline block level element 
+    block과 inline 요소의 특징을 모두 갖어요.inline lv 요소와 같이 한줄에 표현됨
+    width height margin, property를 모두 지정할 수 있따.
+    *기본적으로 inline 요소와 흡사하게 줄바꿈없이 한 다른 요소와 한 행에 위치시킬수있따.
+    *blocklevel처럼 width, height, margin, padding properties를 모두 정의할수있다.
+    *content 너비만큼만 가로폭을 갖는다.
+    *element 뒤에 공백이 있으면 자동 스페이스 .
+
+    
+    
+    -->
+
+
+
+
+<div>
+
+
+
+    </div>
+
+    <div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
